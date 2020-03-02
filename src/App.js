@@ -1,22 +1,63 @@
 import React, {Component} from 'react';
 import './App.css';
+import {Link, Switch, Route, withRouter} from 'react-router-dom';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      page:"about"
+    }
+  }
+
+  componentDidMount(){
+    this.props.history.push(`/${this.state.page}`)
+  }
+
   render(){
     return (
       <div className="App">
         <header>
           <h1>Sam Weinstein</h1>
           <nav>
-            <span>Projects</span>
-            <span>About</span>
-            <span>Skills</span>
+            <Link
+              to="/projects"
+              onClick={()=>{
+                this.setState({page:'projects'})
+              }}
+              className={this.state.page==='projects'?"selected":undefined}
+              >
+              <span>Projects</span>
+            </Link>
+            <Link
+              to="/about"
+              onClick={()=>{
+                this.setState({page:'about'})
+              }}
+              className={this.state.page==='about'?"selected":undefined}
+              >
+              <span>About</span>
+            </Link>
+            <Link
+              to="/skills"
+              onClick={()=>{
+                this.setState({page:'skills'})
+              }}
+              className={this.state.page==='skills'?"selected":undefined}
+              >
+              <span>Skills</span>
+            </Link>
           </nav>
         </header>
+        <Switch>
+          <Route path="/projects">
+            
+          </Route>
+        </Switch>
       </div>
     );
   }
 
 }
 
-export default App;
+export default withRouter(App);

@@ -8,7 +8,7 @@ header nav {
   display: flex;
   justify-content: space-around;
 }
-header nav span {
+header nav a {
   border-style: solid;
   border-color: black;
   border-width: 1px 0.5px 1px 0.5px;
@@ -16,7 +16,12 @@ header nav span {
   text-align: center;
   font-size: 2rem;
   padding: 20px;
+  border-radius: 10px 10px 0 0;
 }
 .selected {
   border-width: 1px 0.5px 0 0.5px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
