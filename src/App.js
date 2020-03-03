@@ -1,6 +1,9 @@
+
 import React, {Component} from 'react';
 import './App.css';
 import {Link, Switch, Route, withRouter} from 'react-router-dom';
+
+import About from './components/About';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +14,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.props.history.push(`/${this.state.page}`)
+    // this.props.history.push(`/${this.state.page}`)
   }
 
   render(){
@@ -49,11 +52,17 @@ class App extends Component {
             </Link>
           </nav>
         </header>
-        <Switch>
-          <Route path="/projects">
-            
-          </Route>
-        </Switch>
+        <main>
+          <Switch>
+            <Route path="/projects">
+
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </main>
+
       </div>
     );
   }
