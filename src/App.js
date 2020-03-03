@@ -4,13 +4,21 @@ import './App.css';
 import {Link, Switch, Route, withRouter} from 'react-router-dom';
 
 import About from './components/About';
-import Skills from './components/Skills'
+import Skills from './components/Skills';
+import Project from './components/Project';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state={
-      page:"about"
+      page:"about",
+      projects:[
+        {
+          title:"Testing",
+          description:"Will Finish Later",
+          image:null
+        },
+      ]
     }
   }
 
@@ -55,14 +63,18 @@ class App extends Component {
         </header>
         <main>
           <Switch>
-            <Route path="/projects">
-
-            </Route>
             <Route path="/about">
               <About />
+
             </Route>
             <Route path="/skills">
               <Skills />
+            </Route>
+            <Route path="/projects">
+              {this.state.projects.map((project,key)=>(
+                  <Project project={project} key={key}/>
+                ))
+              }
             </Route>
           </Switch>
         </main>
