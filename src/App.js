@@ -4,6 +4,7 @@ import './App.css';
 import {Link, Switch, Route, withRouter} from 'react-router-dom';
 
 import About from './components/About';
+import Skills from './components/Skills'
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +60,9 @@ class App extends Component {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/skills">
+              <Skills />
             </Route>
           </Switch>
         </main>
