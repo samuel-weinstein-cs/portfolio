@@ -6,13 +6,26 @@ body {
 }
 h1 {
   font-family: 'Abril Fatface', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
+}
+header{
+  background: url(https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg) no-repeat center center fixed;
+  background-size: cover;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+header h1{
+  color: white;
+  text-align: center;
+  margin-top: 0;
 }
 header nav {
   display: flex;
   justify-content: space-around;
 }
 header nav a {
+  background-color: rgba(255,255,255,0.8);
   font-family: 'Abril Fatface', cursive;
   border-style: solid;
   border-color: black;
@@ -24,6 +37,7 @@ header nav a {
   border-radius: 10px 10px 0 0;
 }
 .selected {
+  background-color: rgb(255,255,255);
   border-width: 1px 0.5px 0 0.5px;
 }
 a {

@@ -29,7 +29,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <header>
+        <header >
           <h1>Sam Weinstein</h1>
           <nav>
             <Link
