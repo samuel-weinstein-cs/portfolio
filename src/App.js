@@ -14,9 +14,10 @@ class App extends Component {
       page:"about",
       projects:[
         {
-          title:"Testing",
-          description:"Will Finish Later",
-          image:null
+          title:"Words Per Minute",
+          description:"Words Per Minute is a typing game that allows users to measure how fast they can type challenging words. This project uses an API to fetch the words and definitions.",
+          image:"https://i.imgur.com/9HMU1Hc.png",
+          url:"http://wordsperminute.surge.sh"
         },
       ]
     }

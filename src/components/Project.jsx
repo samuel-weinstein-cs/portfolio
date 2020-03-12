@@ -3,8 +3,13 @@ import React from 'react';
 const Project = (props) => {
   console.log(props);
   return(
-    <div>
-      <h2>{props.project.title}</h2>
+    <div className='project'>
+      <img src={props.project.image} />
+      <div>
+        <h2><a href={props.project.url}>{props.project.title}</a></h2>
+        <p>{props.project.description}</p>
+      </div>
+
     </div>
   )
 }
