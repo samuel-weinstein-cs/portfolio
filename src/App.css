@@ -20,6 +20,7 @@ header{
   /* position: sticky; */
   top: 0px;
   width: 100%;
+  padding: 10vh 0;
 }
 header h1{
   color: white;
@@ -71,6 +72,7 @@ p {
 }
 main{
   height: 100vh;
+  padding: 0;
 }
 .project{
   height: 50vh;
@@ -83,4 +85,16 @@ main{
   max-height: 100%;
   width: auto;
   margin: 20px;
+}
+.section-header, .project-header {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.section-header {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.project-header :hover {
+  text-decoration: underline;
 }

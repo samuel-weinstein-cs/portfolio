@@ -45,53 +45,16 @@ class App extends Component {
       <div className="App">
         <header >
           <h1>Sam Weinstein</h1>
-          <nav>
-            <Link
-              to="/projects"
-              onClick={()=>{
-                this.setState({page:'projects'})
-              }}
-              className={this.state.page==='projects'?"selected":undefined}
-              >
-              <span>Projects</span>
-            </Link>
-            <Link
-              to="/about"
-              onClick={()=>{
-                this.setState({page:'about'})
-              }}
-              className={this.state.page==='about'?"selected":undefined}
-              >
-              <span>About</span>
-            </Link>
-            <Link
-              to="/skills"
-              onClick={()=>{
-                this.setState({page:'skills'})
-              }}
-              className={this.state.page==='skills'?"selected":undefined}
-              >
-              <span>Skills</span>
-            </Link>
-          </nav>
         </header>
         <main>
-          <Switch>
-            <Route path="/about">
-              <About />
+          <About />
+          <h1 className="section-header">Projects</h1>
+          {this.state.projects.map((project,key)=>(
+              <Project project={project} key={key}/>
+            ))
+          }
 
-            </Route>
-            <Route path="/skills">
-              <Skills />
-            </Route>
-            <Route path="/projects">
-              {this.state.projects.map((project,key)=>(
-                  <Project project={project} key={key}/>
-                ))
-              }
-            </Route>
-
-          </Switch>
+          <Skills />
         </main>
 
       </div>

@@ -20,27 +20,31 @@ import sequelize from '../icons/sequelize/sequelize-original-wordmark.svg';
 
 const Skills = () => {
   return (
-    <div className="skills-container">
-      <img src={c} />
-      <img src={cplusplus} />
-      <img src={css3} />
-      <img src={git} />
-      <img src={github} />
-      <img src={heroku} />
-      <img src={html5} />
-      <img src={java} />
-      <img src={javascript} />
-      <img src={linux} />
-      <img src={nodejs} />
-      <img src={npm} />
-      <img src={postgresql} />
-      <img src={python} />
-      <img src={rails} />
-      <img src={react} />
-      <img src={ruby} />
-      <img src={sequelize} />
+    <div>
+      <h1 className="section-header">Skills</h1>
+      <div className="skills-container">
+
+        <img src={c} />
+        <img src={cplusplus} />
+        <img src={css3} />
+        <img src={git} />
+        <img src={github} />
+        <img src={heroku} />
+        <img src={html5} />
+        <img src={java} />
+        <img src={javascript} />
+        <img src={linux} />
+        <img src={nodejs} />
+        <img src={npm} />
+        <img src={postgresql} />
+        <img src={python} />
+        <img src={rails} />
+        <img src={react} />
+        <img src={ruby} />
+        <img src={sequelize} />
 
 
+      </div>
     </div>
   )
 }
